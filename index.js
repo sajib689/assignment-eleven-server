@@ -20,6 +20,7 @@ const client = new MongoClient(uri, {
   }
 });
 const servicesCollection = client.db('dentalCare').collection('services');
+const reviewsCollection = client.db('dentalCare').collection('reviews');
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -35,6 +36,12 @@ async function run() {
       const query = {_id: new ObjectId(id)}
       const service = await servicesCollection.findOne(query)
       res.send(service)
+    })
+    // add reviews 
+    app.post('/reviews', async (req, res) => {
+      const query = req.body
+      const result = await reviewsCollection.insertOne(query)
+      res.send(result)
     })
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
