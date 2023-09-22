@@ -1,0 +1,38 @@
+[
+    {
+        "title": "ORTHODONTIC TREATMENT",
+        "img": "https://clovedental.in/wp-content/uploads/2020/11/Aligner-Invisalign.jpg",
+        "description": "Orthodontic treatment is a way of straightening or moving teeth, to improve the appearance of the teeth and how they work. It can also help to look after the long-term health of your teeth, gums and jaw joints, by spreading the biting pressure over all your teeth.",
+        "price": 2000
+    },
+    {
+        "title": "CROWNS AND BRIDGES",
+        "img": "https://skfamilydentaltx.com/wp-content/uploads/sites/428/2017/09/Dental-crown-and-Bridge-768x476.jpg.optimal.jpg",
+        "description": "A dental crown or bridge is the most common alternatives to permanent dental implants. You might need a dental bridge if you are missing one or more teeth in a row but have healthy teeth on either side of the missing teeth. The existing teeth can hold the dental bridge, which replaces the teeth that are missing. ",
+        "price": 2500
+    },
+    {
+        "title": "DENTAL JEWELRY",
+        "img": "https://www.bestorthodontistbracespune.in/images/dental%20jewellery1.png",
+        "description": "Dental jewelry is a cosmetic dental procedure. It is a dental accessory such as a small stone, a semi-precious gem, or even a diamond placed on your tooth/teeth (usually on the tooth/teeth which will be visible in your smile – anterior teeth), it helps in enhancing and making your smile unique.",
+        "price": 1700
+    },
+    {
+        "title": "DENTAL IMPLANTS",
+        "img": "https://www.yourdentistryguide.com/wp-content/uploads/2017/11/implants-vs-min.jpg",
+        "description": "A dental implant is a prosthesis that interfaces with the bone of the jaw or skull to support a dental prosthesis such as a crown, bridge, denture, or facial prosthesis or to act as an orthodontic anchor.",
+        "price": 2000
+    },
+    {
+        "title": "ROOT CANAL TREATMENT",
+        "img": "https://www.perfectdentalstudio.com/wp-content/uploads/2022/01/Root-Canal-Treatment.jpg",
+        "description": "Root canal treatment (endodontics) is a dental procedure used to treat infection at the centre of a tooth. Root canal treatment is not painful and can save a tooth that might otherwise have to be removed completely.",
+        "price": 2100
+    },
+    {
+        "title": "DENTURES",
+        "img": "https://www.bryancousindmd.com/wp-content/uploads/implant-supported-dentures-2010.jpg",
+        "description": "A denture is a removable replacement for missing teeth and surrounding tissues. Two types of dentures are available -- complete and partial dentures. Complete dentures are used when all the teeth are missing, while partial dentures are used when some natural teeth remain",
+        "price": 2300
+    }
+]
