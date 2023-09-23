@@ -49,7 +49,39 @@ async function run() {
       if(req.query?.email) {
         query = {email: req.query.email}
       }
-      const result = await reviewsCollection.find(query).toArray()
+       const result = await reviewsCollection.find(query).toArray()
+       res.send(result)
+    })
+    // get all reviews
+    app.get
+    // get single review
+    app.get('/reviews/:id', async (req, res) => {
+      const id = req.params.id
+      const query = {_id: new ObjectId(id)}
+      
+      console.log(query)
+      const result = await reviewsCollection.findOne(query)
+      res.send(result)
+    })
+    // reviews delete from reviews collection
+    app.delete('/reviews/:id', async (req, res) => {
+      const  id = req.params.id
+      const query = {_id: new ObjectId(id)}
+      const result = await reviewsCollection.deleteOne(query)
+      res.send(result)
+    })
+    // update the review comments
+    app.put('/reviews/:id', async(req, res) => {
+      const id = req.params.id
+      const query = {_id: new ObjectId(id)}
+      const options = {upsert: true}
+      const updatedComment = req.body
+      const update = {
+        $set: {
+          comment: updatedComment.comment
+        }
+      }
+      const result = await reviewsCollection.updateOne(query, update, options)
       res.send(result)
     })
     // Send a ping to confirm a successful connection
