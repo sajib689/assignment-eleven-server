@@ -25,6 +25,12 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
+    // add services
+    app.post('/services', async(req, res) => {
+      const query = req.body 
+      const result = await servicesCollection.insertOne(query);
+      res.send(result)
+    })
     // get services from the database
     app.get('/services', async (req, res) => {
         const service = await servicesCollection.find().toArray()
