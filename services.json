@@ -3,19 +3,43 @@
         "title": "ORTHODONTIC TREATMENT",
         "img": "https://clovedental.in/wp-content/uploads/2020/11/Aligner-Invisalign.jpg",
         "description": "Orthodontic treatment is a way of straightening or moving teeth, to improve the appearance of the teeth and how they work. It can also help to look after the long-term health of your teeth, gums and jaw joints, by spreading the biting pressure over all your teeth.",
-        "price": 2000
+        "price": 2000,
+        "reviews": [{
+            "name": "sajib",
+            "email": "sajibkhan@gmail.com",
+            "imageUrl": "https://previews.123rf.com/images/metelsky/metelsky1904/metelsky190400021/121859823-male-avatar-icon-or-portrait-handsome-young-man-face-with-beard-vector-illustration.jpg",
+            "serviceId": "650c3fdc31f051952b5a5d41",
+            "title": "CROWNS AND BRIDGES",
+            "comment": "CROWNS AND BRIDGES"
+        }]
     },
     {
         "title": "CROWNS AND BRIDGES",
         "img": "https://skfamilydentaltx.com/wp-content/uploads/sites/428/2017/09/Dental-crown-and-Bridge-768x476.jpg.optimal.jpg",
         "description": "A dental crown or bridge is the most common alternatives to permanent dental implants. You might need a dental bridge if you are missing one or more teeth in a row but have healthy teeth on either side of the missing teeth. The existing teeth can hold the dental bridge, which replaces the teeth that are missing. ",
-        "price": 2500
+        "price": 2500,
+        "reviews": [{
+            "name": "sajib",
+            "email": "sajibkhan@gmail.com",
+            "imageUrl": "https://previews.123rf.com/images/metelsky/metelsky1904/metelsky190400021/121859823-male-avatar-icon-or-portrait-handsome-young-man-face-with-beard-vector-illustration.jpg",
+            "serviceId": "650c3fdc31f051952b5a5d41",
+            "title": "CROWNS AND BRIDGES",
+            "comment": "CROWNS AND BRIDGES"
+        }]
     },
     {
         "title": "DENTAL JEWELRY",
         "img": "https://www.bestorthodontistbracespune.in/images/dental%20jewellery1.png",
         "description": "Dental jewelry is a cosmetic dental procedure. It is a dental accessory such as a small stone, a semi-precious gem, or even a diamond placed on your tooth/teeth (usually on the tooth/teeth which will be visible in your smile – anterior teeth), it helps in enhancing and making your smile unique.",
-        "price": 1700
+        "price": 1700,
+        "reviews": [{
+            "name": "sajib",
+            "email": "sajibkhan@gmail.com",
+            "imageUrl": "https://previews.123rf.com/images/metelsky/metelsky1904/metelsky190400021/121859823-male-avatar-icon-or-portrait-handsome-young-man-face-with-beard-vector-illustration.jpg",
+            "serviceId": "650c3fdc31f051952b5a5d41",
+            "title": "CROWNS AND BRIDGES",
+            "comment": "CROWNS AND BRIDGES"
+        }]
     },
     {
         "title": "DENTAL IMPLANTS",
