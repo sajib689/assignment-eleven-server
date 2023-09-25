@@ -116,7 +116,7 @@ async function run() {
       const result = await reviewsCollection.updateOne(query, update, options)
       res.send(result)
     })
-    // post contact us data
+    // post contact us database
     app.post('/contact', async (req, res) => {
       const query = req.body
       const result = await contactsCollection.insertOne(query)
