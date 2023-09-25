@@ -88,11 +88,11 @@ async function run() {
     })
     // get single review
     app.get('/reviews', async (req, res) => {
-      let query = {}
-      if(req.query?.email) {
-        query = {email: req.query.email}
-      }
-      const result = await reviewsCollection.find(query).toArray()
+      const id = req.params.id
+      const query = {_id: new ObjectId(id)}
+      
+      console.log(query)
+      const result = await reviewsCollection.findOne(query)
       res.send(result)
     })
     // reviews delete from reviews collection
