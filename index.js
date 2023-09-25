@@ -1,5 +1,6 @@
 const express = require('express')
 require('dotenv').config()
+var jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
 const cors = require('cors');
@@ -21,6 +22,21 @@ const client = new MongoClient(uri, {
 });
 const servicesCollection = client.db('dentalCare').collection('services');
 const reviewsCollection = client.db('dentalCare').collection('reviews');
+const contactsCollection = client.db('dentalCare').collection('contact');
+const verifyJWT = (req, res, next) => {
+  const authorization = req.headers.authorization
+  if(!authorization) {
+    res.status(401).send({error: true, message: 'Unauthorized access'})
+  }
+  const token = authorization.split(' ')[1]
+  jwt.verify(token, process.env.token, (error, decode) => {
+    if(error) {
+      res.status(402).send({error: true, message: 'Unauthorized access'})
+    }
+    req.decode = decode
+    next()
+  })
+}
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
@@ -62,7 +78,7 @@ async function run() {
        res.send(result)
     })
     // get all reviews
-    app.get('/reviews', async (req, res) => {
+    app.get('/reviews',verifyJWT, async (req, res) => {
       let query = {}
       if(req.query?.email) {
         query = {email: req.query.email}
@@ -99,6 +115,20 @@ async function run() {
       }
       const result = await reviewsCollection.updateOne(query, update, options)
       res.send(result)
+    })
+    // post contact us data
+    app.post('/contact', async (req, res) => {
+      const query = req.body
+      const result = await contactsCollection.insertOne(query)
+      res.send(result)
+    })
+    // jwt process
+    app.post('/jwt', (req, res) => {
+      const user = req.body 
+      const token = jwt.sign(user, process.env.token,{
+        expiresIn: '1h'
+      })
+      res.send({token})
     })
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
