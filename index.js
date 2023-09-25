@@ -40,7 +40,7 @@ const verifyJWT = (req, res, next) => {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+     client.connect();
     // add services
     app.post('/services', async(req, res) => {
       const query = req.body 
@@ -131,7 +131,7 @@ async function run() {
       res.send({token})
     })
     // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
+     client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } finally {
     // Ensures that the client will close when you finish/error
