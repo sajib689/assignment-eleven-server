@@ -65,18 +65,18 @@ async function run() {
       const result = await reviewsCollection.insertOne(query)
       res.send(result)
     })
-    // get reviews
-    app.get('/reviews/:serviceId', async (req, res) => {
-      const serviceId = req.params.serviceId 
-      const cursor = {serviceId: (serviceId)}
-      console.log(cursor)
-      let query = {}
-      if(req.query?.email) {
-        query = {email: req.query.email}
-      }
-       const result = await reviewsCollection.find(query,cursor).toArray()
-       res.send(result)
-    })
+    // // get reviews
+    // app.get('/reviews/:serviceId', async (req, res) => {
+    //   const serviceId = req.params.serviceId 
+    //   const cursor = {serviceId: (serviceId)}
+    //   console.log(cursor)
+    //   let query = {}
+    //   if(req.query?.email) {
+    //     query = {email: req.query.email}
+    //   }
+    //    const result = await reviewsCollection.find(query,cursor).toArray()
+    //    res.send(result)
+    // })
     // get all reviews
     app.get('/reviews',verifyJWT, async (req, res) => {
       let query = {}
